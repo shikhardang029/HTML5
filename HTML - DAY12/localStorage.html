@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        function clickCounter() {
+            if(typeof(Storage) !== "undefined") {
+                localStorage.setItem('Id',"1");
+                document.getElementById("result").innerHTML =localStorage.getItem('Id');
+            } else {
+                alert("Sorry, your broswer doesn not support Session storgae..")
+            }
+        }
+    </script>
+    <title>localStorage</title>
+</head>
+<body>
+    <div id = "result"></div>
+    <input type="button" onclick="clickCounter()"  value="Click">
+</body>
+</html>

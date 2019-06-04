@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+    function showDetails() {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else {
+            document.getElementById("pos").innerHTML = "Geolocation is not supported by this browser"
+        }
+    }
+    function showPosition(position) {
+        document.getElementById("pos").innerHTML = position.coords.latitude+","+position.coords.longitude;
+    }
+    </script>
+    <title>I am gonna, find you !</title>
+</head>
+<body>
+    <input type="button" name="" onclick="showDetails()" value="Click me! you mofo!"><br>
+    You're caught ! You're coordinate are <p id="pos"></p>
+</body>
+</html>
